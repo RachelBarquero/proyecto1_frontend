@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
-
+//DATOS USUARIO
 const Register = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -15,6 +15,7 @@ const Register = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [error, setError] = useState('');
 
+  //Guardar informacion
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevData => ({
@@ -22,7 +23,7 @@ const Register = () => {
       [name]: value
     }));
   };
-
+//Validar datos correctos
   const handleSubmit = async (e) => {
     e.preventDefault();
 

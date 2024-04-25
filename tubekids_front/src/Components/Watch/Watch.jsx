@@ -6,7 +6,7 @@ const Watch = () => {
   const [videos, setVideos] = useState([]);
 
   const fetchData = async () => {
-    try {
+    try {//obtiene videos de perfil padre
       const response = await fetch(`http://localhost:3001/api/videos?id=${localStorage.getItem("Id")}`);
       if (!response.ok) {
         throw new Error('Error fetching videos');

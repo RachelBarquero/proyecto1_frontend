@@ -8,7 +8,7 @@ const Kids = () => {
   const[logIn, setLogIn]= useState(false);
 
   const fetchChildren = async () => {
-    try {
+    try {//obtener niños del padre
       const response = await fetch(`http://localhost:3001/api/kids?id=${localStorage.getItem("Id")}`);
       if (!response.ok) {
         throw new Error('Error fetching children');
@@ -35,7 +35,7 @@ const Kids = () => {
 
   const handleLogin = async () => {
     console.log(selectedChildId);
-    try {
+    try {//vaidación de niños
       const response = await fetch(`http://localhost:3001/api/kidsLogin?id=${selectedChildId}&pin=${pin}`);
       if (!response.ok) {
         throw new Error('Error logging in child');

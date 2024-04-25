@@ -11,7 +11,7 @@ import CreateKids from './Components/AdminKids/CreateKids/CreateKids'
 import EditVideo from './Components/AdminVideos/UpdateVideo/Update'
 import EditProfile from './Components/AdminKids/UpdateKids/UpdateKids'
 
-
+//Creacion de rutas
 function App() {
   return (
     <>

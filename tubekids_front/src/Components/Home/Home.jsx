@@ -21,7 +21,7 @@ const Home = () => {
   };
 
   const handleSubmit = async () => {
-    try {
+    try {//valida pin de usuario padre
       const response = await fetch(`http://localhost:3001/api/userLogin?_id=${localStorage.getItem("Id")}&pin=${pin}`);
       const data = await response.json();
 
